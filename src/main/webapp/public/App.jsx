@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import 'bootstrap/dist/css/bootstrap.css';
 import SkyLight from 'react-skylight';
 import Alert from 'react-s-alert';
 import 'react-s-alert/dist/s-alert-default.css';
 import 'react-s-alert/dist/s-alert-css-effects/slide.css';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import RaisedButton from 'material-ui/RaisedButton';
 
 class App extends React.Component {
   constructor(props) {
@@ -89,7 +90,7 @@ class StudentTable extends React.Component {
 
     return (
       <div>
-      <table className="table table-striped">
+      <table>
         <thead>
           <tr>
             <th>Firstname</th><th>Lastname</th><th>Email</th><th> </th>
@@ -118,7 +119,7 @@ class Student extends React.Component {
             <td>{this.props.student.lastname}</td>
             <td>{this.props.student.email}</td>
             <td>               
-                <button className="btn btn-danger btn-xs" onClick={this.deleteStudent}>Delete</button>
+                <RaisedButton title="Delete" onClick={this.deleteStudent} />
             </td>
           </tr>
         );
@@ -151,32 +152,34 @@ class StudentForm extends React.Component {
         return (
           <div>
             <SkyLight hideOnOverlayClicked ref="simpleDialog">
-                <div className="panel panel-default">
-                <div className="panel-heading">Create student</div>
-                <div className="panel-body">
-                <form className="form">
-                    <div className="col-md-4">
+                <div>
+                <form>
+                    <div>
                         <input type="text" placeholder="Firstname" className="form-control"  name="firstname" onChange={this.handleChange}/>    
                     </div>
-                    <div className="col-md-4">       
+                    <div>       
                         <input type="text" placeholder="Lastname" className="form-control" name="lastname" onChange={this.handleChange}/>
                     </div>
-                    <div className="col-md-4">
+                    <div>
                         <input type="text" placeholder="Email" className="form-control" name="email" onChange={this.handleChange}/>
                     </div>
-                    <div className="col-md-2">
-                        <button className="btn btn-primary" onClick={this.handleSubmit}>Save</button>   
+                    <div>
+                        <RaisedButton title="Save" onClick={this.handleSubmit} primary={true} />   
                     </div>       
                 </form>
                 </div>      
-                </div>
             </SkyLight>
-            <div className="col-md-2">
-                <button className="btn btn-primary" onClick={() => this.refs.simpleDialog.show()}>New student</button>
+            <div>
+                <RaisedButton title="New student" onClick={() => this.refs.simpleDialog.show()} />
             </div>
           </div>   
         );
     }
 }
 
-ReactDOM.render(<App />, document.getElementById('root') );
+const SpringApp = () => (
+    <MuiThemeProvider>
+      <App />
+    </MuiThemeProvider>
+);
+ReactDOM.render(<SpringApp />, document.getElementById('root') );
