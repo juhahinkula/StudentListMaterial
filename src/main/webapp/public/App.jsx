@@ -6,6 +6,7 @@ import 'react-s-alert/dist/s-alert-default.css';
 import 'react-s-alert/dist/s-alert-css-effects/slide.css';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import RaisedButton from 'material-ui/RaisedButton';
+import FlatButton from 'material-ui/FlatButton';
 
 class App extends React.Component {
   constructor(props) {
@@ -119,7 +120,7 @@ class Student extends React.Component {
             <td>{this.props.student.lastname}</td>
             <td>{this.props.student.email}</td>
             <td>               
-                <RaisedButton title="Delete" onClick={this.deleteStudent} />
+                <FlatButton title="Delete" onClick={this.deleteStudent} />
             </td>
           </tr>
         );
