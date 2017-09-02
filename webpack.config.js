@@ -21,6 +21,10 @@ module: {
       { 
         test: /\.(woff2?|ttf|eot|svg|png|jpe?g|gif)$/,
         loader: 'file-loader'
+      },
+      {
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        loader: 'file-loader?name=public/fonts/[name].[ext]'
       }
     ]
   }  

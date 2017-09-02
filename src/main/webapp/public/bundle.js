@@ -13540,38 +13540,29 @@ var StudentForm = function (_React$Component4) {
                     { hideOnOverlayClicked: true, ref: 'simpleDialog' },
                     _react2.default.createElement(
                         'div',
-                        { className: 'panel panel-default' },
+                        null,
                         _react2.default.createElement(
-                            'div',
-                            { className: 'panel-heading' },
-                            'Create student'
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { className: 'panel-body' },
+                            'form',
+                            null,
                             _react2.default.createElement(
-                                'form',
-                                { className: 'form' },
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'col-md-4' },
-                                    _react2.default.createElement('input', { type: 'text', placeholder: 'Firstname', className: 'form-control', name: 'firstname', onChange: this.handleChange })
-                                ),
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'col-md-4' },
-                                    _react2.default.createElement('input', { type: 'text', placeholder: 'Lastname', className: 'form-control', name: 'lastname', onChange: this.handleChange })
-                                ),
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'col-md-4' },
-                                    _react2.default.createElement('input', { type: 'text', placeholder: 'Email', className: 'form-control', name: 'email', onChange: this.handleChange })
-                                ),
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'col-md-2' },
-                                    _react2.default.createElement(_RaisedButton2.default, { title: 'Save', onClick: this.handleSubmit, primary: true })
-                                )
+                                'div',
+                                null,
+                                _react2.default.createElement('input', { type: 'text', placeholder: 'Firstname', className: 'form-control', name: 'firstname', onChange: this.handleChange })
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                null,
+                                _react2.default.createElement('input', { type: 'text', placeholder: 'Lastname', className: 'form-control', name: 'lastname', onChange: this.handleChange })
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                null,
+                                _react2.default.createElement('input', { type: 'text', placeholder: 'Email', className: 'form-control', name: 'email', onChange: this.handleChange })
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                null,
+                                _react2.default.createElement(_RaisedButton2.default, { title: 'Save', onClick: this.handleSubmit, primary: true })
                             )
                         )
                     )
